@@ -169,7 +169,7 @@ Gaffer.Metadata.registerValue( __children["Resize21"]["format"], 'formatPlugValu
 __children["Resize21"]["format"]["displayWindow"]["max"]["y"].setInput( __children["Resize21"]["format"]["displayWindow"]["max"]["x"] )
 __children["Resize21"]["fitMode"].setValue( 4 )
 __children["Resize21"]["__uiPosition"].setValue( imath.V2f( -9.07890224, 19.1886883 ) )
-__children["Inference16"]["model"].setValue( '/home/lucienf/Downloads/yolov7-tiny-dynamic-batch.onnx' )
+__children["Inference16"]["model"].setValue( 'yolo.onnx' )
 __children["Inference16"]["in"][0].setInput( __children["ImageToTensor10"]["tensor"] )
 Gaffer.Metadata.registerValue( __children["Inference16"]["in"][0], 'label', 'images' )
 Gaffer.Metadata.registerValue( __children["Inference16"]["in"][0], 'noduleLayout:label', 'images' )
