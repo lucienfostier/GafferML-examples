@@ -19,11 +19,19 @@ See GafferHQ/Gaffer's github page for more details in installing Gaffer.
 Download the following link https://github.com/microsoft/onnxruntime/releases/download/v1.19.2/onnxruntime-linux-x64-1.19.2.tgz
 and uncompress it using `tar -xvf`
 
+- Create models directory and copy YOLO model
+
+```
+mkdir ~/GAFFERML_MODEL_PATHS
+cp ~/GafferML-examples/examples/YOLO/models/yolo.onnx ~/GAFFERML_MODEL_PATHS/yolo.onnx
+```
+
+
 - Start Gaffer
 
-Set the `ONNX_ROOT` environment variable and start Gaffer
+Set the `ONNX_ROOT` and set `GAFFERML_MODEL_PATHS` environment variables and start Gaffer
 ```
-env ONNX_ROOT=~/onnxruntime-linux-x64-1.19.2 gaffer
+env GAFFERML_MODEL_PATHS=~/GAFFERML_MODEL_PATHS ONNX_ROOT=~/onnxruntime-linux-x64-1.19.2 gaffer
 ```
 
 - Load the script + reference
@@ -35,7 +43,7 @@ file>open...
 Naviguate to the folder of examples
 
 ```
-cd GafferML-examples/examples/YOLO
+GafferML-examples/examples/YOLO/scripts
 ```
 
 Load `YOLO.gfr`
